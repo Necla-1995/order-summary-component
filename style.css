@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --DarkBlue: hsl(223, 47%, 23%);
+}
+
+body{
+    min-height: 100vh;
+    background: url(/images/pattern-background-desktop.svg);
+    background-color: var(--Pale-blue);
+    color: var(--Desaturated-blue);
+    background-repeat: no-repeat;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main{
+    background-color: #fff;
+    max-width: 450px;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.main-image img{
+    border-radius: 1rem 1rem 0 0;
+}
+
+
+article h1{
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+article p{
+    width: 70%;
+    margin: 1rem auto;
+    line-height: 1.5rem;
+}
+
+.section-title{
+    color:var(--DarkBlue);
+    font-weight: 900;
+}
+
+#plan{
+    background-color: var(--Very-pale-blue);
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap:.5rem;
+    align-items: center;
+    margin: 2rem auto;
+}
+#plan ul{
+    list-style: none;
+    text-align: left;
+}
+
+#plan a{
+    font-weight: 700;
+    color: var(--Bright-blue);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+#plan a:hover{
+    text-decoration: none;
+    opacity: .6;
+}
+
+button{
+    font-weight: 700;
+    width:70%;
+    padding: 1rem;
+    border-radius: 1rem;
+    border:none;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    margin-bottom: 1rem;
+}
+
+#payment{
+    background-color: var(--Bright-blue);
+    color: var(--Very-pale-blue);
+    box-shadow: 0 10px  15px hsl(224, 23%, 55%, .5) ;
+}
+
+#payment:hover{
+    opacity: .6;
+}
+
+#cancel{
+    background-color: #fff;
+    color: var(--Desaturated-blue);
+}
+
+#cancel:hover{
+    color: var(--DarkBlue);
+}
+
+
+/* responsive mobile design */
+
+@media only screen and (max-width: 600px){
+    body{
+        background: var(--Pale-blue);
+    }
+
+    main{
+        max-width: 80vw;
+    }
+    .main-image img{
+        max-width: 100%;
+    }
+}
